@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>GTI Trade Campaign Tool</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1 id="calculatorTitle">GTI Trade Campaign - Raffle Draw</h1>
+
+<div class="region-box">
+  <label><b>Region:</b></label>
+  <select id="region">
+    <option value="" disabled selected>-- Choose Region --</option>
+    <option>Kabul</option>
+    <option>Herat</option>
+    <option>Kandahar</option>
+    <option>Jalalabad</option>
+    <option>Mazar</option>
+    <option>Helmand</option>
+    <option>Ghazni</option>
+    <option>Konduz</option>
+    <option>Jozjan</option>
+    <option>Khost</option>
+    <option>Poli Khomre</option>
+    <option>Parwan</option>
+    <option>Badakhshan</option>
+  </select>
+
+  <label><b>Customer Type:</b></label>
+  <select id="customerType">
+    <option value="" disabled selected>-- Choose Customer Type --</option>
+    <option>Retail</option>
+    <option>Semi-Wholesale</option>
+    <option>Wholesale</option>
+  </select>
+</div>
+
+<table id="bagTable">
+  <thead>
+    <tr>
+      <th>Product</th>
+      <th>Plastic Bag / Outer</th>
+      <th>Target Outer for Raffle</th>
+      <th>Order Placed (Outers)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Milano Fan Pack New York</td><td class="bag">2</td><td class="raffleTarget">–</td><td><input class="order" type="number" min="0" value="0"></td></tr>
+    <tr><td>Milano Fan Pack London</td><td class="bag">2</td><td class="raffleTarget">–</td><td><input class="order" type="number" min="0" value="0"></td></tr>
+    <tr><td>Milano Queen Furious Red</td><td class="bag">2</td><td class="raffleTarget">–</td><td><input class="order" type="number" min="0" value="0"></td></tr>
+    <tr><td>Mond Nano Blue</td><td class="bag">2</td><td class="raffleTarget">–</td><td><input class="order" type="number" min="0" value="0"></td></tr>
+    <tr><td>Mond Nano White</td><td class="bag">2</td><td class="raffleTarget">–</td><td><input class="order" type="number" min="0" value="0"></td></tr>
+  </tbody>
+</table>
+
+<button id="calculate">Calculate Offers</button>
+
+<div style="display:none">
+  <span id="mhrOuters">0</span>
+  <span id="mhrBags">0</span>
+  <span id="indOuters">0</span>
+  <span id="indBags">0</span>
+  <span id="totalOuters">0</span>
+  <span id="totalBags">0</span>
+</div>
+
+<table class="result-table">
+  <thead>
+    <tr>
+      <th>Raffle Campaign</th>
+      <th>Eligibility Status</th>
+      <th>Number of Tickets</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Raffle Ticket</td>
+      <td id="raffleStatus"></td>
+      <td id="raffleTickets">0</td>
+    </tr>
+  </tbody>
+</table>
+
+<div id="customerEligible">
+  Customer is Eligible For
+  <span id="maxTickets" class="highlight">0</span> Raffle Ticket.
+  <span id="maxBags" style="display:none;"></span>
+</div>
+
+<div id="creatorCredit">Created by Alen Nero</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
